@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriMax - Revolutionising Farm Management</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div id="logo">
+                <!-- Place your logo here -->
+                <img src="logo.jpeg" alt="AgriMax Logo">
+            </div>
+            <ul id="nav-menu">
+                <!-- Navigation Links -->
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="hero">
+            <!-- Hero Image/Video -->
+            <!-- You can replace this img tag with a video tag if you prefer -->
+            <img src="hero.jpeg" alt="AgriMax Field">
+            <div id="hero-content">
+                <h1>Revolutionising Farm Management</h1>
+                <p>Seamless IoT Integration for Optimised Agricultural Operations</p>
+                <a href="#contact" class="cta-button">Request a Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="feature">
+            <h2>IoT Device Integration</h2>
+            <p>Integrates with various IoT devices for real-time farm monitoring.</p>
+        </div>
+        <div class="feature">
+            <h2>Real-Time Data Analytics</h2>
+            <p>Provides actionable insights to optimise farm operations.</p>
+        </div>
+        <!-- Repeat for other features -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About AgriMax</h2>
+        <p>What They Do: AgriMax integrates IoT and cloud technology to provide a comprehensive platform that includes real-time farm management, a marketplace for agritech apps, and a grant management application.
+            Industry Focus: AgriMax serves a broad spectrum of the agricultural industry, including horticulture, arable farming, and livestock management, aiming to offer tools that enhance productivity across these sectors.</p>
+        <!-- Add more content here -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch for more information and a personalised demonstration.</p>
+        <form action="submit_contact_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form><!-- Contact form or information -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 AgriMax. All rights reserved.</p>
+        <!-- Additional links and social media icons -->
+    </footer>
+    <!-- Modal for Demo Request -->
+        <div id="demoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Request a Demo</h2>
+                <form action="submit_demo_request.php" method="POST">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                    
+                    <button type="submit">Submit Request</button>
+                </form>
+            </div>
+        </div>
+
+
+</body>
+</html>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('demoModal');
+    
+    // Get the button that opens the modal
+    var btn = document.querySelector('.cta-button');
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    
